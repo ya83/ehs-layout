@@ -1,6 +1,8 @@
 @import "colors";
 @import "functions";
 
+// Global HTML and BODY styles
+
 html, body {
     padding: 0;
     margin: 0;
@@ -17,12 +19,32 @@ body {
     width: 100%;
 }
 
+// 3 columns grid
+
+.cols-3 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: pxToRem(40px);
+    row-gap: pxToRem(40px);
+    @media screen and (max-width: pxToRem(767px)) {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+
+// Global section styles
+
 .section {
     position: relative;
     padding-top: pxToRem(100px);
     z-index: 1;
+    &:not(.section__about) {
+        padding-top: pxToRem(180px);
+    }
     &:last-of-type {
-        padding-bottom: pxToRem(100px);
+        padding-bottom: pxToRem(180px);
     }
     @media screen and (max-width: pxToRem(1199px)) {
         padding-top: pxToRem(80px);
@@ -42,6 +64,7 @@ body {
     }
 }
 
+// Blured radial figures
 
 @media screen and (min-width: pxToRem(1200px)) {
     .blured-figure {
@@ -91,12 +114,22 @@ body {
     }
 }
 
+// Global styles for Advantages section
+
 .advantages {
     padding-top: pxToRem(100px);
     @media screen and (max-width: pxToRem(1199px)) {
+        padding-top: pxToRem(70px);
+    }
+    @media screen and (min-width: pxToRem(568px)) and (max-width: pxToRem(767px)) {
         padding-top: pxToRem(40px);
     }
+    @media screen and (max-width: pxToRem(567px)) {
+        margin-top: 20px;
+    }
 }
+
+// Global styles for .container for wrapping
 
 .container {
     margin: 0 auto;
@@ -112,9 +145,13 @@ body {
     }
 }
 
+// Class for centering some elements
+
 .centered {
     text-align: center;
 }
+
+// Class for global centering some elements by flexbox
 
 .flex-centered {
     display: flex;
@@ -124,9 +161,6 @@ body {
     text-align: center;
     > .subheading {
         max-width: pxToRem(662px);
-        @media screen and (max-width: pxToRem(1199px)) {
-            max-width: pxToRem(472px);
-        }
         @media screen and (max-width: pxToRem(568px)) {
             margin-top: pxToRem(20px);
         }
@@ -142,15 +176,25 @@ body {
     }
 }
 
+// Various mixings
+
+// Transitions
+
 @mixin transition-default {
     transition: all .25s ease-in-out;
 }
 @mixin transition-slow {
     transition: all .5s cubic-bezier(.02,1.23,.79,1.08);
 }
+
+// Shadow
+
 @mixin btn-shadow {
     box-shadow: 0 pxToRem(20px) pxToRem(20px) rgba(21, 30, 52, 0.25);
 }
+
+// Background blurring
+
 @mixin bg-blur {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);

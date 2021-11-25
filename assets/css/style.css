@@ -381,14 +381,35 @@ body {
     width: 100%;
 }
 
+.cols-3 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 2.5rem;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+}
+
+@media screen and (max-width: 47.9375rem) {
+    .cols-3 {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+
 .section {
     position: relative;
     padding-top: 6.25rem;
     z-index: 1;
 }
 
+.section:not(.section__about) {
+    padding-top: 11.25rem;
+}
+
 .section:last-of-type {
-    padding-bottom: 6.25rem;
+    padding-bottom: 11.25rem;
 }
 
 @media screen and (max-width: 74.9375rem) {
@@ -486,7 +507,19 @@ body {
 
 @media screen and (max-width: 74.9375rem) {
     .advantages {
+        padding-top: 4.375rem;
+    }
+}
+
+@media screen and (min-width: 35.5rem) and (max-width: 47.9375rem) {
+    .advantages {
         padding-top: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 35.4375rem) {
+    .advantages {
+        margin-top: 20px;
     }
 }
 
@@ -527,12 +560,6 @@ body {
 
 .flex-centered > .subheading {
     max-width: 41.375rem;
-}
-
-@media screen and (max-width: 74.9375rem) {
-    .flex-centered > .subheading {
-        max-width: 29.5rem;
-    }
 }
 
 @media screen and (max-width: 35.5rem) {
@@ -641,14 +668,35 @@ body {
     width: 100%;
 }
 
+.cols-3 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 2.5rem;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+}
+
+@media screen and (max-width: 47.9375rem) {
+    .cols-3 {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+
 .section {
     position: relative;
     padding-top: 6.25rem;
     z-index: 1;
 }
 
+.section:not(.section__about) {
+    padding-top: 11.25rem;
+}
+
 .section:last-of-type {
-    padding-bottom: 6.25rem;
+    padding-bottom: 11.25rem;
 }
 
 @media screen and (max-width: 74.9375rem) {
@@ -732,7 +780,19 @@ body {
 
 @media screen and (max-width: 74.9375rem) {
     .advantages {
+        padding-top: 4.375rem;
+    }
+}
+
+@media screen and (min-width: 35.5rem) and (max-width: 47.9375rem) {
+    .advantages {
         padding-top: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 35.4375rem) {
+    .advantages {
+        margin-top: 20px;
     }
 }
 
@@ -775,12 +835,6 @@ body {
     max-width: 41.375rem;
 }
 
-@media screen and (max-width: 74.9375rem) {
-    .flex-centered > .subheading {
-        max-width: 29.5rem;
-    }
-}
-
 @media screen and (max-width: 35.5rem) {
     .flex-centered > .subheading {
         margin-top: 1.25rem;
@@ -808,7 +862,7 @@ body {
     box-sizing: border-box;
     color: #F9FFFF;
     cursor: pointer;
-    padding: 1.25rem 1.5625rem 1rem;
+    padding: 1.25rem 1.5625rem 1.125rem;
     margin: 0;
     letter-spacing: 0.05rem;
     outline: none;
@@ -870,14 +924,35 @@ body {
     width: 100%;
 }
 
+.cols-3 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 2.5rem;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+}
+
+@media screen and (max-width: 47.9375rem) {
+    .cols-3 {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+
 .section {
     position: relative;
     padding-top: 6.25rem;
     z-index: 1;
 }
 
+.section:not(.section__about) {
+    padding-top: 11.25rem;
+}
+
 .section:last-of-type {
-    padding-bottom: 6.25rem;
+    padding-bottom: 11.25rem;
 }
 
 @media screen and (max-width: 74.9375rem) {
@@ -961,7 +1036,19 @@ body {
 
 @media screen and (max-width: 74.9375rem) {
     .advantages {
+        padding-top: 4.375rem;
+    }
+}
+
+@media screen and (min-width: 35.5rem) and (max-width: 47.9375rem) {
+    .advantages {
         padding-top: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 35.4375rem) {
+    .advantages {
+        margin-top: 20px;
     }
 }
 
@@ -1002,12 +1089,6 @@ body {
 
 .flex-centered > .subheading {
     max-width: 41.375rem;
-}
-
-@media screen and (max-width: 74.9375rem) {
-    .flex-centered > .subheading {
-        max-width: 29.5rem;
-    }
 }
 
 @media screen and (max-width: 35.5rem) {
@@ -1562,23 +1643,6 @@ body {
     }
 }
 
-.cols-3 {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    -moz-column-gap: 2.5rem;
-    column-gap: 2.5rem;
-    row-gap: 2.5rem;
-}
-
-@media screen and (max-width: 35.5rem) {
-    .cols-3 {
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    }
-}
-
 .advantages .cols-3 > .col {
     text-align: center;
     margin: 0 auto;
@@ -1607,6 +1671,16 @@ body {
     .advantages .cols-3 > .col {
         margin-top: 1.25rem;
     }
+
+    .advantages .cols-3 > .col:first-child {
+        margin-top: -25px;
+    }
+}
+
+@media screen and (max-width: 35.5rem) {
+    .advantages__secondary .cols-3 > .col:first-child {
+        margin-top: -40px;
+    }
 }
 
 .advantages__circle {
@@ -1617,7 +1691,7 @@ body {
     border-radius: 50%;
     height: 5rem;
     width: 5rem;
-    filter: drop-shadow(0px 20px 20px rgba(21, 30, 52, 0.99));
+    filter: drop-shadow(0rem 1.25rem 1.25rem rgba(21, 30, 52, 0.99));
 }
 
 .advantages__circle::before, .advantages__circle::after, .advantages__circle i {
@@ -1710,6 +1784,79 @@ body {
 .advantages .small-text {
     display: block;
     margin-top: 0.9375rem;
+}
+
+.trigger {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.trigger__rev {
+    flex-direction: row-reverse;
+}
+
+@media screen and (min-width: 75rem) {
+    .trigger__text-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .trigger__text-block > .subheading {
+        max-width: 33.75rem;
+    }
+}
+
+.trigger__text-block > .btn-group {
+    margin-top: 2.5rem;
+}
+
+.trigger__text-block > .btn-group > .btn:not(:first-child) {
+    margin-left: 1.875rem;
+}
+
+.trigger__image {
+    position: relative;
+    border-radius: 50%;
+    height: 23.5rem;
+    width: 23.5rem;
+    filter: drop-shadow(0rem 1.25rem 1.25rem rgba(21, 30, 52, 0.99));
+}
+
+.trigger__image > img {
+    border-radius: 50%;
+    height: 100%;
+    width: auto;
+}
+
+.trigger__image::before, .trigger__image::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    content: "";
+}
+
+.trigger__image::before {
+    background-color: rgba(249, 255, 255, 0.1);
+    transform: translate(-1.6875rem, -1.6875rem);
+    height: 26.875rem;
+    width: 26.875rem;
+    z-index: -1;
+}
+
+.trigger__image::after {
+    background-color: rgba(249, 255, 255, 0.05);
+    transform: translate(-3.25rem, -3.25rem);
+    height: 30rem;
+    width: 30rem;
+    z-index: -2;
 }
 
 .modal-window {

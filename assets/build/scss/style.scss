@@ -8,7 +8,7 @@
 @import "navigation";
 
 
-// Hero screen
+// Hero section
 
 .hero {
     position: relative;
@@ -89,19 +89,7 @@
     }
 }
 
-
-.cols-3 {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: pxToRem(40px);
-    row-gap: pxToRem(40px);
-    @media screen and (max-width: pxToRem(568px)) {
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    }
-}
+// Advantages
 
 .advantages {
     .cols-3 {
@@ -124,6 +112,20 @@
             }
             @media screen and (max-width: pxToRem(568px)) {
                 margin-top: pxToRem(20px);
+                &:first-child {
+                    margin-top: -25px;
+                }
+            }
+        }
+    }
+    &__secondary {
+        .cols-3 {
+            > .col {
+                @media screen and (max-width: pxToRem(568px)) {
+                    &:first-child {
+                        margin-top: -40px;
+                    }
+                }
             }
         }
     }
@@ -135,7 +137,7 @@
         border-radius: 50%;
         height: pxToRem(80px);
         width: pxToRem(80px);
-        filter: drop-shadow(0px 20px 20px rgba(21, 30, 52, 0.99));
+        filter: drop-shadow(pxToRem(0px) pxToRem(20px) pxToRem(20px) rgba(21, 30, 52, 0.99));
         &::before, &::after, i {
             position: absolute;
             top: 0;
@@ -211,7 +213,75 @@
     }
 }
 
+// Trigger sections
 
+.trigger {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__rev {
+        flex-direction: row-reverse;
+    }
+    &__text-block {
+        @media screen and (min-width: pxToRem(1200px)) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-left: pxToRem(40px);
+        }
+        > .subheading {
+            @media screen and (min-width: pxToRem(1200px)) {
+                max-width: pxToRem(540px);
+            }
+        }
+        > .btn-group {
+            margin-top: pxToRem(40px);
+            > .btn {
+                &:not(:first-child) {
+                    margin-left: pxToRem(30px);
+                }
+            }
+        }
+    }
+    &__image {
+        position: relative;
+        border-radius: 50%;
+        // overflow: hidden;
+        height: pxToRem(376px);
+        width: pxToRem(376px);
+        filter: drop-shadow(pxToRem(0px) pxToRem(20px) pxToRem(20px) rgba(21, 30, 52, 0.99));
+        > img {
+            border-radius: 50%;
+            height: 100%;
+            width: auto;
+        }
+        &::before, &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            content: '';
+        }
+        &::before {
+            background-color: rgb($blue-white, 10%);
+            transform: translate(pxToRem(-27px), pxToRem(-27px));
+            height: calc(pxToRem(376px) + pxToRem(54px));
+            width: calc(pxToRem(376px) + pxToRem(54px));
+            z-index: -1;
+        }
+        &::after {
+            background-color: rgb($blue-white, 5%);
+            transform: translate(pxToRem(-52px), pxToRem(-52px));
+            height: calc(pxToRem(376px) + pxToRem(104px));
+            width: calc(pxToRem(376px) + pxToRem(104px));
+            z-index: -2;
+        }
+    }
+}
+
+// Modal window
 
 .modal-window {
     position: fixed;
