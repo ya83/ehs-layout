@@ -529,6 +529,18 @@ body {
     max-width: 41.375rem;
 }
 
+@media screen and (max-width: 74.9375rem) {
+    .flex-centered > .subheading {
+        max-width: 29.5rem;
+    }
+}
+
+@media screen and (max-width: 35.5rem) {
+    .flex-centered > .subheading {
+        margin-top: 1.25rem;
+    }
+}
+
 .flex-centered > .btn {
     margin-top: 1.25rem;
 }
@@ -763,6 +775,18 @@ body {
     max-width: 41.375rem;
 }
 
+@media screen and (max-width: 74.9375rem) {
+    .flex-centered > .subheading {
+        max-width: 29.5rem;
+    }
+}
+
+@media screen and (max-width: 35.5rem) {
+    .flex-centered > .subheading {
+        margin-top: 1.25rem;
+    }
+}
+
 .flex-centered > .btn {
     margin-top: 1.25rem;
 }
@@ -978,6 +1002,18 @@ body {
 
 .flex-centered > .subheading {
     max-width: 41.375rem;
+}
+
+@media screen and (max-width: 74.9375rem) {
+    .flex-centered > .subheading {
+        max-width: 29.5rem;
+    }
+}
+
+@media screen and (max-width: 35.5rem) {
+    .flex-centered > .subheading {
+        margin-top: 1.25rem;
+    }
 }
 
 .flex-centered > .btn {
@@ -1288,7 +1324,7 @@ body {
 }
 
 @media screen and (max-width: 74.9375rem) {
-    .header .container .navigation .nav-menu > ul > li > .btn__question {
+    .header .container .navigation .nav-menu > ul > li > .btn__modal {
         display: none;
     }
 
@@ -1533,6 +1569,14 @@ body {
     grid-template-columns: repeat(3, 1fr);
     -moz-column-gap: 2.5rem;
     column-gap: 2.5rem;
+    row-gap: 2.5rem;
+}
+
+@media screen and (max-width: 35.5rem) {
+    .cols-3 {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
 }
 
 .advantages .cols-3 > .col {
@@ -1542,15 +1586,27 @@ body {
     max-width: 15rem;
 }
 
-@media screen and (min-width: 35.5625rem) and (max-width: 74.9375rem) {
+.advantages .cols-3 > .col:nth-child(2n+2) {
+    margin-top: 1.875rem;
+}
+
+@media screen and (max-width: 74.9375rem) {
     .advantages .cols-3 > .col {
         min-width: 13.5rem;
         max-width: 13.5rem;
     }
 }
 
-.advantages .cols-3 > .col:nth-child(2n+2) {
-    margin-top: 1.875rem;
+@media screen and (max-width: 63.9375rem) {
+    .advantages .cols-3 > .col:nth-child(2n+2) {
+        margin-top: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 35.5rem) {
+    .advantages .cols-3 > .col {
+        margin-top: 1.25rem;
+    }
 }
 
 .advantages__circle {
@@ -1618,8 +1674,37 @@ body {
     background-image: url(../images/svg/high-quality.svg);
 }
 
+@media screen and (max-width: 63.9375rem) {
+    .advantages__circle {
+        height: 3.875rem;
+        width: 3.875rem;
+    }
+
+    .advantages__circle::before {
+        transform: translate(-0.5625rem, -0.5625rem);
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .advantages__circle::after {
+        transform: translate(-1.125rem, -1.125rem);
+        height: 6.125rem;
+        width: 6.125rem;
+    }
+
+    .advantages__circle > i {
+        background-size: 1.875rem;
+    }
+}
+
 .advantages h5.heading {
     margin-top: 3.4375rem;
+}
+
+@media screen and (max-width: 63.9375rem) {
+    .advantages h5.heading {
+        margin-top: 2.5rem;
+    }
 }
 
 .advantages .small-text {

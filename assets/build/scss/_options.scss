@@ -124,6 +124,12 @@ body {
     text-align: center;
     > .subheading {
         max-width: pxToRem(662px);
+        @media screen and (max-width: pxToRem(1199px)) {
+            max-width: pxToRem(472px);
+        }
+        @media screen and (max-width: pxToRem(568px)) {
+            margin-top: pxToRem(20px);
+        }
     }
     > .btn {
         margin-top: pxToRem(20px);

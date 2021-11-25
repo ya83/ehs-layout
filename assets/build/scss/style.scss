@@ -96,6 +96,11 @@
     -ms-grid-columns: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
     column-gap: pxToRem(40px);
+    row-gap: pxToRem(40px);
+    @media screen and (max-width: pxToRem(568px)) {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
 }
 
 .advantages {
@@ -105,12 +110,20 @@
             margin: 0 auto;
             min-width: pxToRem(240px);
             max-width: pxToRem(240px);
-            @media screen and (min-width: pxToRem(569px)) and (max-width: pxToRem(1199px)) {
+            &:nth-child(2n+2) {
+                margin-top: pxToRem(30px);
+            }
+            @media screen and (max-width: pxToRem(1199px)) {
                 min-width: pxToRem(216px);
                 max-width: pxToRem(216px);
             }
-            &:nth-child(2n+2) {
-                margin-top: pxToRem(30px);
+            @media screen and (max-width: pxToRem(1023px)) {
+                &:nth-child(2n+2) {
+                    margin-top: pxToRem(20px);
+                }
+            }
+            @media screen and (max-width: pxToRem(568px)) {
+                margin-top: pxToRem(20px);
             }
         }
     }
@@ -168,9 +181,29 @@
                 background-image: url(../images/svg/high-quality.svg);
             }
         }
+        @media screen and (max-width: pxToRem(1023px)) {
+            height: pxToRem(62px);
+            width: pxToRem(62px);
+            &::before {
+                transform: translate(pxToRem(-9px), pxToRem(-9px));
+                height: calc(pxToRem(62px) + pxToRem(18px));
+                width: calc(pxToRem(62px) + pxToRem(18px));
+            }
+            &::after {
+                transform: translate(pxToRem(-18px), pxToRem(-18px));
+                height: calc(pxToRem(62px) + pxToRem(36px));
+                width: calc(pxToRem(62px) + pxToRem(36px));
+            }
+            > i {
+                background-size: pxToRem(30px);
+            }
+        }
     }
     h5.heading {
         margin-top: pxToRem(55px);
+        @media screen and (max-width: pxToRem(1023px)) {
+            margin-top: pxToRem(40px);
+        }
     }
     .small-text {
         display: block;
