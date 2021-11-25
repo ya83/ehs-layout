@@ -1,0 +1,64 @@
+@import "functions";
+@import "colors";
+
+// Typography
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700; 
+    margin: 0;
+}
+
+h1 {
+    font-size: pxToEm(54px);
+    line-height: pxToRem(62px);
+}
+h5 {
+    font-size: pxToEm(18px);
+    line-height: pxToRem(26px);
+}
+
+@media screen and (min-width: pxToRem(569px)) and (max-width: pxToRem(1199px)) {
+    h1 {
+        font-size: pxToEm(32px);
+        line-height: pxToRem(42px);
+    }
+}
+
+@media screen and (max-width: pxToRem(568px)) {
+    h1 {
+        font-size: pxToEm(24px);
+        line-height: pxToRem(28px);
+    }
+    h5 {
+        font-size: pxToEm(16px);
+        line-height: pxToRem(24px);
+    }
+}
+
+h5.heading {
+    font-weight: 700;
+}
+
+.subheading {
+    color: $blue-deep;
+    font-size: 1.125em;
+    font-weight: normal;
+    line-height: 1.75rem;
+    margin-top: 1.875rem;
+    @media screen and (min-width: pxToRem(569px)) and (max-width: pxToRem(1199px)) {
+        font-size: pxToEm(16px);
+        line-height: pxToRem(24px);
+        margin-top: pxToRem(18px);
+    }
+    @media screen and (max-width: pxToRem(568px)) {
+        font-size: 0.875em;
+        line-height: 1.175rem;
+    }
+}
+
+.small-text {
+    color: $blue-deep;
+    font-weight: 400;
+    font-size: pxToEm(14px);
+    line-height: pxToRem(22px);
+}

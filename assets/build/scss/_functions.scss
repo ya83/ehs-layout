@@ -1,0 +1,15 @@
+@use 'sass:math';
+
+$body-font-size: 16px;
+
+// PX to REM
+
+@function pxToRem($pxVal) {
+    @return math.div($pxVal, $body-font-size) * 1rem;	
+}
+
+// PX to EM
+
+@function pxToEm($pxVal) {
+    @return math.div($pxVal, $body-font-size) * 1em;	
+}

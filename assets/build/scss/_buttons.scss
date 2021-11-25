@@ -1,0 +1,51 @@
+@import "colors";
+@import "functions";
+@import "options";
+
+// Buttons
+
+.btn {
+    border-radius: 3.125rem;
+    box-sizing: border-box;
+    color: $blue-white;
+    cursor: pointer;
+    padding: pxToRem(20px) pxToRem(25px) pxToRem(16px);
+    margin: 0;
+    letter-spacing: pxToRem(0.8px);
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.875em;
+    font-weight: 700;
+    @media screen and (min-width: pxToRem(1200px)) {
+        @include transition-default();
+    }
+    @media screen and (max-width: pxToRem(568px)) {
+        padding: pxToRem(15px) pxToRem(23px) pxToRem(12px);
+    }
+    &__slim {
+        padding: pxToRem(13px) pxToRem(20px) pxToRem(11px);
+    }
+
+    // Green
+
+    &__green {
+        border: pxToRem(2px) solid $green;
+        background-color: $green;
+        @include btn-shadow();
+        &:hover {
+            background-color: $green-light;
+            border-color: $green-light;
+        }
+    }
+
+    // Bordered with transparent background
+
+    &__tprt {
+        border: pxToRem(2px) solid rgb($blue-white, 10%);
+        background-color: transparent;
+        &:hover {
+            border-color: $blue-white;
+        }
+    }
+}
