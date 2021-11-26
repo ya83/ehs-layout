@@ -58,6 +58,12 @@ body {
     }
     @media screen and (max-width: pxToRem(568px)) {
         padding-top: pxToRem(60px);
+        &:not(.section__about) {
+            padding-top: pxToRem(60px);
+        }
+        &.section__trigger {
+            padding-top: pxToRem(80px);
+        }
         &:last-of-type {
             padding-bottom: pxToRem(80px);
         }

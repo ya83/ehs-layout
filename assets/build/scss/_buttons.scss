@@ -5,6 +5,7 @@
 // Buttons
 
 .btn {
+    position: relative;
     border-radius: 3.125rem;
     box-sizing: border-box;
     color: $blue-white;
@@ -44,8 +45,30 @@
     &__tprt {
         border: pxToRem(2px) solid rgb($blue-white, 10%);
         background-color: transparent;
-        &:hover {
-            border-color: $blue-white;
+        @media screen and (min-width: pxToRem(1200px)) {
+            &::before {
+                position: absolute;
+                top: 0;
+                right: pxToRem(22px);
+                content: '';
+                background-image: url(../images/svg/arrow-right.svg);
+                background-repeat: no-repeat;
+                background-position: pxToRem(-15px) pxToRem(21px);
+                opacity: 0;
+                display: block;
+                height: 100%;
+                width: pxToRem(15px);
+                @include transition-default;
+            }
+            &:hover {
+                border-color: $blue-white;
+                padding-right: pxToRem(50px);
+                &::before {
+                    background-position: 0 pxToRem(21px);
+                    opacity: 1;
+                    transition-delay: .15s;
+                }
+            }
         }
     }
 }

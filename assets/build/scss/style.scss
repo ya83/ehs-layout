@@ -217,11 +217,21 @@
 
 .trigger {
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
     flex-wrap: wrap;
-    &__rev {
-        flex-direction: row-reverse;
+    @media screen and (min-width: pxToRem(1200px)) {
+        justify-content: space-around;
+    }
+    @media screen and (max-width: pxToRem(1199px)) {
+        justify-content: space-evenly;
+    }
+    @media screen and (min-width: pxToRem(1024px)) {
+        flex-direction: row;
+        &__rev {
+            flex-direction: row-reverse;
+        }
+    }
+    @media screen and (max-width: pxToRem(767px)) {
+        flex-direction: column-reverse;
     }
     &__text-block {
         @media screen and (min-width: pxToRem(1200px)) {
@@ -231,9 +241,18 @@
             justify-content: center;
             padding-left: pxToRem(40px);
         }
+        @media screen and (max-width: pxToRem(767px)) {
+            text-align: center;
+        }
         > .subheading {
             @media screen and (min-width: pxToRem(1200px)) {
                 max-width: pxToRem(540px);
+            }
+            @media screen and (max-width: pxToRem(1199px)) {
+                max-width: pxToRem(340px);
+            }
+            @media screen and (max-width: pxToRem(767px)) {
+                max-width: none;
             }
         }
         > .btn-group {
@@ -241,14 +260,27 @@
             > .btn {
                 &:not(:first-child) {
                     margin-left: pxToRem(30px);
+                    @media screen and (max-width: pxToRem(1199px)) {
+                        margin-left: pxToRem(15px);
+                    }
                 }
+                @media screen and (max-width: pxToRem(767px)) {
+                    display: table;
+                    margin: 0 auto;
+                    &:not(:first-child) {
+                        margin-left: auto;
+                        margin-top: pxToRem(15px);
+                    }
+                }
+            }
+            @media screen and (max-width: pxToRem(568px)) {
+                margin-top: pxToRem(20px);
             }
         }
     }
     &__image {
         position: relative;
         border-radius: 50%;
-        // overflow: hidden;
         height: pxToRem(376px);
         width: pxToRem(376px);
         filter: drop-shadow(pxToRem(0px) pxToRem(20px) pxToRem(20px) rgba(21, 30, 52, 0.99));
@@ -277,6 +309,35 @@
             height: calc(pxToRem(376px) + pxToRem(104px));
             width: calc(pxToRem(376px) + pxToRem(104px));
             z-index: -2;
+        }
+        @media screen and (max-width: pxToRem(1199px)) {
+            height: pxToRem(270px);
+            width: pxToRem(270px);
+            &::before {
+                transform: translate(pxToRem(-19px), pxToRem(-19px));
+                height: calc(pxToRem(270px) + pxToRem(38px));
+                width: calc(pxToRem(270px) + pxToRem(38px));
+            }
+            &::after {
+                transform: translate(pxToRem(-37px), pxToRem(-37px));
+                height: calc(pxToRem(270px) + pxToRem(74px));
+                width: calc(pxToRem(270px) + pxToRem(74px));
+            }
+        }
+        @media screen and (max-width: 767px) {
+            margin: 0 auto pxToRem(60px);
+            height: pxToRem(192px);
+            width: pxToRem(192px);
+            &::before {
+                transform: translate(pxToRem(-13px), pxToRem(-13px));
+                height: calc(pxToRem(192px) + pxToRem(26px));
+                width: calc(pxToRem(192px) + pxToRem(26px));
+            }
+            &::after {
+                transform: translate(pxToRem(-26px), pxToRem(-26px));
+                height: calc(pxToRem(192px) + pxToRem(52px));
+                width: calc(pxToRem(192px) + pxToRem(52px));
+            }
         }
     }
 }
