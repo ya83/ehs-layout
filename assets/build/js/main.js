@@ -95,4 +95,57 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Swiper slider
+
+    const swiperSlider = new Swiper('.swiper', {
+        // Default parameters 
+        slidesPerView: 1,
+        spaceBetween: 10,
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                allowTouchMove: false,
+                spaceBetween: 30,
+                width: '254'
+            },
+            // when window width is >= 1200px
+            1024: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 40,
+                // Navigation
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                loop: true
+            },
+            // when window width is >= 1200px
+            1200: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+                spaceBetween: 40,
+                // Navigation
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                loop: true
+            }
+        }
+    });
+    
+    swiperSlider.update();
+
+    // swiperSlider.slideNext();
+
 });

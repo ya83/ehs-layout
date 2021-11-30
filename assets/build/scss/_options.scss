@@ -3,7 +3,8 @@
 
 // Global HTML and BODY styles
 
-html, body {
+html,
+body {
     padding: 0;
     margin: 0;
 }
@@ -17,6 +18,35 @@ body {
     overflow-x: hidden;
     height: 100%;
     width: 100%;
+
+    &::-webkit-scrollbar {
+        background-color: rgb($blue-white, 5%);
+        width: pxToRem(4px);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $green;
+        border-radius: pxToRem(2px);
+    }
+}
+
+// Global styles for .container for wrapping
+
+.container {
+    margin: 0 auto;
+    max-width: pxToRem(1364px);
+
+    @media screen and (max-width: pxToRem(1363px)) {
+        max-width: 96%;
+    }
+
+    @media screen and (max-width: pxToRem(1199px)) {
+        max-width: 96%;
+    }
+
+    @media screen and (max-width: pxToRem(568px)) {
+        max-width: 90.8%;
+    }
 }
 
 // 3 columns grid
@@ -28,6 +58,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     column-gap: pxToRem(40px);
     row-gap: pxToRem(40px);
+
     @media screen and (max-width: pxToRem(767px)) {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -40,30 +71,39 @@ body {
     position: relative;
     padding-top: pxToRem(100px);
     z-index: 1;
+
     &:not(.section__about) {
         padding-top: pxToRem(180px);
     }
+
     &:last-of-type {
         padding-bottom: pxToRem(180px);
     }
+
     @media screen and (max-width: pxToRem(1199px)) {
         padding-top: pxToRem(80px);
+
         & .blured-figure {
             display: none;
             visibility: hidden;
         }
+
         &:last-of-type {
             padding-bottom: pxToRem(80px);
         }
     }
-    @media screen and (max-width: pxToRem(568px)) {
+
+    @media screen and (max-width: pxToRem(767px)) {
         padding-top: pxToRem(60px);
+
         &:not(.section__about) {
             padding-top: pxToRem(60px);
         }
+
         &.section__trigger {
             padding-top: pxToRem(80px);
         }
+
         &:last-of-type {
             padding-bottom: pxToRem(80px);
         }
@@ -78,43 +118,56 @@ body {
         top: 0;
         background-image: url(../images/svg/blured-radial-figure.svg);
         background-repeat: no-repeat;
-        animation: blured-figure-opacity 15s ease-in-out infinite;
+        animation: blured-figure-opacity 10s ease-in-out infinite;
         height: 100%;
         width: 100%;
         z-index: -1;
+
         &.left {
             left: 0;
             background-position: left top;
+
             &.small {
                 transform: translate(pxToRem(-240px), pxToRem(100px));
             }
+
             &.middle {}
+
             &.large {}
         }
+
         &.right {
             right: 0;
             background-position: right top;
+
             &.small {
                 transform: translate(pxToRem(240px), pxToRem(100px));
             }
+
             &.middle {}
+
             &.large {}
         }
+
         &.small {
             background-size: pxToRem(340px);
         }
+
         &.middle {}
+
         &.large {}
     }
 }
 
-@keyframes blured-figure-opacity{
+@keyframes blured-figure-opacity {
     0% {
         opacity: .4;
     }
+
     50% {
         opacity: .8;
     }
+
     100% {
         opacity: .4;
     }
@@ -124,30 +177,17 @@ body {
 
 .advantages {
     padding-top: pxToRem(100px);
+
     @media screen and (max-width: pxToRem(1199px)) {
         padding-top: pxToRem(70px);
     }
+
     @media screen and (min-width: pxToRem(568px)) and (max-width: pxToRem(767px)) {
         padding-top: pxToRem(40px);
     }
+
     @media screen and (max-width: pxToRem(567px)) {
         margin-top: 20px;
-    }
-}
-
-// Global styles for .container for wrapping
-
-.container {
-    margin: 0 auto;
-    max-width: pxToRem(1364px);
-    @media screen and (max-width: pxToRem(1363px)) {
-        max-width: 96%;
-    }
-    @media screen and (max-width: pxToRem(1199px)) {
-        max-width: 96%;
-    }
-    @media screen and (max-width: pxToRem(568px)) {
-        max-width: 90.8%;
     }
 }
 
@@ -165,17 +205,22 @@ body {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    > .subheading {
+
+    >.subheading {
         max-width: pxToRem(662px);
+
         @media screen and (max-width: pxToRem(568px)) {
             margin-top: pxToRem(20px);
         }
     }
-    > .btn {
+
+    >.btn {
         margin-top: pxToRem(20px);
+
         @media screen and (max-width: pxToRem(1199px)) {
             margin-top: pxToRem(10px);
         }
+
         @media screen and (max-width: pxToRem(568px)) {
             margin-top: pxToRem(5px);
         }
@@ -189,14 +234,22 @@ body {
 @mixin transition-default {
     transition: all .25s ease-in-out;
 }
+
 @mixin transition-slow {
-    transition: all .5s cubic-bezier(.02,1.23,.79,1.08);
+    transition: all .5s cubic-bezier(.02, 1.23, .79, 1.08);
 }
 
 // Shadow
 
 @mixin btn-shadow {
     box-shadow: 0 pxToRem(20px) pxToRem(20px) rgba(21, 30, 52, 0.25);
+}
+
+// Shadow with green neon light
+
+@mixin btn-shadow-neon {
+    box-shadow: 0 pxToRem(7px) pxToRem(99px) 0 rgb($green, 60%),
+        0 pxToRem(20px) pxToRem(20px) rgba(21, 30, 52, 0.95);
 }
 
 // Background blurring

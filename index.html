@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>ЭкоГидроСервис</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЭкоГидроСервис</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 <body class="home">
@@ -14,18 +14,18 @@
                 <a href="#" aria-hidden="true" class="logo"><img src="./assets/images/svg/ehs-logo.svg" alt=""></a>
                 <nav class="nav-menu">
                     <ul class="navi">
-                        <li><a href="#" aria-hidden="true">О компании</a></li>
-                        <li><a href="#" aria-hidden="true">Услyги</a></li>
-                        <li><a href="#" aria-hidden="true">Новости и акции</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Услyги</a></li>
+                        <li><a href="#">Новости и акции</a></li>
                     </ul>
                     <ul>
                         <li class="icon"><span><span>Работаем</span> 24/7</span></li>
                         <li class="btn__contacts">
                             <a href="#" aria-hidden="true">Контакты <i></i></a>
                             <ul class="dropdown">
-                                <li><a href="#" aria-hidden="true">(073) 123-45-67</a></li>
-                                <li><a href="#" aria-hidden="true">(095) 123-45-67</a></li>
-                                <li><a href="#" aria-hidden="true">(098) 123-45-67</a></li>
+                                <li><a href="#">(073) 123-45-67</a></li>
+                                <li><a href="#">(095) 123-45-67</a></li>
+                                <li><a href="#">(098) 123-45-67</a></li>
                             </ul>
                         </li>
                         <li>
@@ -61,7 +61,7 @@
         <div class="container flex-centered">
             <h1>Кто мы?</h1>
             <p class="subheading">Мы – команда профессионалов знающая своё дело.<br>Наша миссия – быстро среагировать на аварийную ситуацию и максимально качественно справиться с задачей.</p>
-            <a href="#" role="button" aria-hidden="true" class="btn btn__tprt">Узнать больше<i></i></a>
+            <a href="#" role="button" class="btn btn__tprt">Узнать больше<i></i></a>
         </div>
         <div class="container">
             <div class="advantages">
@@ -93,13 +93,59 @@
                     <h1>Не проходит вода?<br>Вантуз не помогает?<br>Стоит жуткий запах?</h1>
                     <p class="subheading">Наши специалисты быстро и эффективно решат эти проблемы 24/7.</p>
                     <div class="btn-group">
-                        <a href="#" role="button" class="btn btn__green">Вызвать бригаду</a>
+                        <a href="#" role="button" data-modal-id="brigade_call" class="btn btn__green btn__modal">Вызвать бригаду</a>
                         <a href="#" role="button" class="btn btn__tprt">Все услуги</a>
                     </div>
                 </div>
                 <figure class="trigger__image">
                     <img src="./assets/images/trigger-1.jpg" alt="Прочистка канализации">
                 </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container flex-centered">
+            <h1>Наши услуги</h1>
+            <p class="subheading">Мы одинаково профессионально выполним работу по устранению любой из возникших проблем, будь то непроходимость канализации или засорившиеся ливнестоки.</p>
+            <a href="#" role="button" class="btn btn__tprt">Все услуги<i></i></a>
+        </div>
+        <div class="container container__swiper">
+            <div class="swiper-outer">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="item">Slide 1</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">Slide 2</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">Slide 3</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">Slide 4</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">Slide 5</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">Slide 6</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">Slide 7</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">Slide 8</div>
+                        </div>
+                    </div>
+                </div>
+                <button aria-label="prev" class="swiper-button-prev"></button>
+                <button aria-label="next" class="swiper-button-next"></button>
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"></div>
             </div>
         </div>
     </section>
@@ -111,7 +157,7 @@
                     <h1>Сбои в работе слива?<br>Не отводится вода?<br>Аварийная ситуация?</h1>
                     <p class="subheading">Наши специалисты быстро и эффективно решат эти проблемы 24/7.</p>
                     <div class="btn-group">
-                        <a href="#" role="button" class="btn btn__green">Вызвать бригаду</a>
+                        <a href="#" role="button" data-modal-id="brigade_call" class="btn btn__green btn__modal">Вызвать бригаду</a>
                         <a href="#" role="button" class="btn btn__tprt">Все услуги</a>
                     </div>
                 </div>
@@ -157,7 +203,7 @@
                     <h1>Забился ливнесток?<br>Вода не проходит?<br>Портится ландшафт?</h1>
                     <p class="subheading">Наши специалисты быстро и эффективно решат эти проблемы 24/7.</p>
                     <div class="btn-group">
-                        <a href="#" role="button" class="btn btn__green">Вызвать бригаду</a>
+                        <a href="#" role="button" data-modal-id="brigade_call" class="btn btn__green btn__modal">Вызвать бригаду</a>
                         <a href="#" role="button" class="btn btn__tprt">Все услуги</a>
                     </div>
                 </div>
@@ -173,7 +219,7 @@
     <div id="ask_question" class="modal-window">
         <div class="modal-window__body"></div>
         <div class="modal-window__content">
-            <a href="#" class="modal-close">Закрыть</a>
+            <a href="#" role="button" aria-hidden="true" class="modal-close"><i></i></a>
             <h1>Задать вопрос</h1>
             <div>
                 <p>Какое-то содерджимое модального окна.</p>
@@ -184,7 +230,7 @@
     <div id="free_consultation" class="modal-window">
         <div class="modal-window__body"></div>
         <div class="modal-window__content">
-            <a href="#" class="modal-close">Закрыть</a>
+            <a href="#" role="button" aria-hidden="true" class="modal-close"><i></i></a>
             <h1>Бесплатная консультация</h1>
             <div>
                 <p>Какое-то содерджимое модального окна.</p>
@@ -192,6 +238,18 @@
         </div>
     </div>
 
+    <div id="brigade_call" class="modal-window">
+        <div class="modal-window__body"></div>
+        <div class="modal-window__content">
+            <a href="#" role="button" aria-hidden="true" class="modal-close"><i></i></a>
+            <h1>Заявка на вызов бригады</h1>
+            <div>
+                <p>Какое-то содерджимое модального окна.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.min.js"></script>
 </body>
 </html>

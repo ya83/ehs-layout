@@ -18,12 +18,15 @@
     text-decoration: none;
     font-size: 0.875em;
     font-weight: 700;
+
     @media screen and (min-width: pxToRem(1200px)) {
         @include transition-default();
     }
+
     @media screen and (max-width: pxToRem(568px)) {
         padding: pxToRem(15px) pxToRem(23px) pxToRem(12px);
     }
+
     &__slim {
         padding: pxToRem(13px) pxToRem(20px) pxToRem(11px);
     }
@@ -34,6 +37,7 @@
         border: pxToRem(2px) solid $green;
         background-color: $green;
         @include btn-shadow();
+
         &:hover {
             background-color: $green-light;
             border-color: $green-light;
@@ -45,6 +49,7 @@
     &__tprt {
         border: pxToRem(2px) solid rgb($blue-white, 10%);
         background-color: transparent;
+
         @media screen and (min-width: pxToRem(1200px)) {
             &::before {
                 position: absolute;
@@ -58,15 +63,17 @@
                 display: block;
                 height: 100%;
                 width: pxToRem(15px);
-                @include transition-default;
+                @include transition-slow;
             }
+
             &:hover {
                 border-color: $blue-white;
                 padding-right: pxToRem(50px);
+
                 &::before {
                     background-position: 0 pxToRem(21px);
                     opacity: 1;
-                    transition-delay: .15s;
+                    transition-delay: .25s;
                 }
             }
         }
